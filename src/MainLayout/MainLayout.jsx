@@ -1,9 +1,10 @@
+import Sidebar from "../Layout/Navigation/Sidebar";
 
 
 const MainLayout = () => {
     return (
-        <div className="text-9xl">
-            Hello 
+        <div>
+            <Sidebar></Sidebar>
         </div>
     );
 };
