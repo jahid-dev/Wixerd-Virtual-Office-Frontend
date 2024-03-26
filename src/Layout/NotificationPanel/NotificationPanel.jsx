@@ -5,12 +5,12 @@ import user from '../../../Assests/User_Icon.png'
 const NotificationPanel = () => {
     return (
         <div className='flex justify-center items-center gap-x-5'>
-            <img className='w-[2vw]'  src={logout} alt="" />
-            <img className='w-[2vw]'  src={email} alt="" />
-            <img className='w-[2vw]'  src={notification} alt="" />
-            <img className='w-[2vw]'  src={user} alt="" />
+            <img className='w-[2vw] cursor-pointer'  src={logout} alt="" />
+            <img className='w-[2vw] cursor-pointer'  src={email} alt="" />
+            <img className='w-[2vw] cursor-pointer'  src={notification} alt="" />
+            <img className='w-[2vw] cursor-pointer'  src={user} alt="" />
         </div>
     );
 };
 
-export default NotificationPanel;
+export default NotificationPanel
