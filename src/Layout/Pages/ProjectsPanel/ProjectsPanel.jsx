@@ -1,7 +1,9 @@
+import YourStatus from "../../Shared/YourStatus/YourStatus";
+
 
 const ProjectItem = ({ title, imageSrc }) => {
     return (
-        <span className="mb-3 mr-2"> 
+        <span className="mb-3 mr-2"> {/* Added margin bottom and margin right */}
             <div className="flex flex-col">
                 <p>{title}</p>
             </div>
@@ -15,14 +17,14 @@ const ProjectItem = ({ title, imageSrc }) => {
 const ProjectsPanel = () => {
     const defaultImageUrl = "https://i.ibb.co/23vqMnr/collage-customer-experience-concept-23-2149367132.jpg";
     return (
-        <div>
-            <h2 className="text-xl font-bold">Overview Updates</h2>
-            <div className="grid grid-cols-3 gap-2 py-3">
-                <ProjectItem title="Update from management" imageSrc={defaultImageUrl} />
-                <ProjectItem title="News & Events" imageSrc={defaultImageUrl} />
-                <ProjectItem title="List Projects by you" imageSrc={defaultImageUrl} />
-            </div>
-
+        <div className="flex">
+            <div className="flex-grow">
+                <h2 className="text-xl font-bold">Overview Updates</h2>
+                <div className="grid grid-cols-3 gap-2 py-3">
+                    <ProjectItem title="Update from management" imageSrc={defaultImageUrl} />
+                    <ProjectItem title="News & Events" imageSrc={defaultImageUrl} />
+                    <ProjectItem title="List Projects by you" imageSrc={defaultImageUrl} />
+                </div>
             <h2 className="text-xl font-bold">On-going Project overviews</h2>
             <div className="grid grid-cols-3 gap-2 py-3">
                 <ProjectItem title="Clients comment" imageSrc={defaultImageUrl} />
@@ -43,10 +45,14 @@ const ProjectsPanel = () => {
             </div>
 
             <h2 className="text-xl font-bold">Upcoming Projects</h2>
-            <div className="grid grid-cols-3 py-3">
-                <div className="col-span-3 bg-blue-500 flex justify-center items-center h-44 rounded-md">
-                    Upcoming Projects Box
+                <div className="grid grid-cols-3 py-3">
+                    <div className="col-span-3 bg-blue-500 flex justify-center items-center h-44 rounded-md">
+                        Upcoming Projects Box
+                    </div>
                 </div>
+            </div>
+            <div className="w-1/4 pl-4">
+                <YourStatus />
             </div>
         </div>
     );
