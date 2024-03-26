@@ -23,7 +23,7 @@ const Sidebar = () => {
                 </div>
                 <ul className={`flex  px-6  flex-col text-xl text-nowrap transition-all duration-700 overflow-hidden gap-5   items-start ${!open ? "w-0 " : "w-[18rem]"}`}>
                     <NavLink to='/' className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={dashborad} alt="" /> Dashboard</NavLink>
-                    <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={ProjectsPanel} alt="" /> Projects Panel</NavLink>
+                    <NavLink to='/projectspanel' className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={ProjectsPanel} alt="" /> Projects Panel</NavLink>
                     <NavLink  to='/ongoingProjects' className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={OnGoing} alt="" /> On-going Projects</NavLink>
                     <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={Assests} alt="" /> Assests Section</NavLink>
                     <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={Creative} alt="" /> Creative Brust</NavLink>
