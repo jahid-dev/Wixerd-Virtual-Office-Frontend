@@ -14,17 +14,11 @@ const ProjectItem = ({ title, imageSrc }) => {
     );
 };
 
-const ProjectsPanel = () => {
+const OnGoingProjects = () => {
     const defaultImageUrl = "https://i.ibb.co/23vqMnr/collage-customer-experience-concept-23-2149367132.jpg";
     return (
         <div className="flex">
             <div className="flex-grow">
-                <h2 className="text-xl font-bold">Overview Updates</h2>
-                <div className="grid grid-cols-3 gap-2 py-3">
-                    <ProjectItem title="Update from management" imageSrc={defaultImageUrl} />
-                    <ProjectItem title="News & Events" imageSrc={defaultImageUrl} />
-                    <ProjectItem title="List Projects by you" imageSrc={defaultImageUrl} />
-                </div>
             <h2 className="text-xl font-bold">On-going Project overviews</h2>
             <div className="grid grid-cols-3 gap-2 py-3">
                 <ProjectItem title="Clients comment" imageSrc={defaultImageUrl} />
@@ -32,24 +26,30 @@ const ProjectsPanel = () => {
                 <ProjectItem title="General rules for project creation" imageSrc={defaultImageUrl} />
             </div>
 
-            <h2 className="text-xl font-bold">Asset & Collaboration</h2>
+            <h2 className="text-xl font-bold">Project name</h2>
             <div className="grid grid-cols-3 gap-2 py-3">
-                <ProjectItem title="Graphic assets" imageSrc={defaultImageUrl} />
+                <ProjectItem title="project overview" imageSrc={defaultImageUrl} />
+                <ProjectItem title="Assets" imageSrc={defaultImageUrl} />
                 <ProjectItem title="Documentation" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Collaboration requests" imageSrc={defaultImageUrl} />
             </div>
+            <h2 className="text-xl font-bold">Project name</h2>
             <div className="grid grid-cols-3 gap-2 py-3">
-                <ProjectItem title="Coding assets" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Tips" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Collaboration with" imageSrc={defaultImageUrl} />
+                <ProjectItem title="project overview" imageSrc={defaultImageUrl} />
+                <ProjectItem title="Assets" imageSrc={defaultImageUrl} />
+                <ProjectItem title="Documentation" imageSrc={defaultImageUrl} />
             </div>
-
-            <h2 className="text-xl font-bold">Upcoming Projects</h2>
-                <div className="grid grid-cols-3 py-3">
-                    <div className="col-span-3 bg-blue-500 flex justify-center items-center h-44 rounded-md">
-                        Upcoming Projects Box
-                    </div>
-                </div>
+            <h2 className="text-xl font-bold">Project name</h2>
+            <div className="grid grid-cols-3 gap-2 py-3">
+                <ProjectItem title="project overview" imageSrc={defaultImageUrl} />
+                <ProjectItem title="Assets" imageSrc={defaultImageUrl} />
+                <ProjectItem title="Documentation" imageSrc={defaultImageUrl} />
+            </div>
+            <h2 className="text-xl font-bold">Project name</h2>
+            <div className="grid grid-cols-3 gap-2 py-3">
+                <ProjectItem title="project overview" imageSrc={defaultImageUrl} />
+                <ProjectItem title="Assets" imageSrc={defaultImageUrl} />
+                <ProjectItem title="Documentation" imageSrc={defaultImageUrl} />
+            </div>
             </div>
             <div className="w-1/4 pl-4">
                 <YourStatus />
@@ -58,4 +58,4 @@ const ProjectsPanel = () => {
     );
 };
 
-export default ProjectsPanel;
+export default OnGoingProjects;
