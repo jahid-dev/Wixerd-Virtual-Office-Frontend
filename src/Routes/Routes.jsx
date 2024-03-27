@@ -5,6 +5,7 @@ import UpcomingProjectsTRY from "../Layout/Pages/UpcomingProjectsTRY/UpcomingPro
 import ProjectsPanel from "../Layout/Pages/ProjectsPanel/ProjectsPanel";
 import OnGoingProjects from "../Layout/Pages/OnGoingProjects/OnGoingProjects";
 import History from "../Layout/Pages/History/History";
+import AssetSection from "../Layout/Pages/AssetSection/AssetSection";
 
 
 export const router = createBrowserRouter([
@@ -23,12 +24,16 @@ export const router = createBrowserRouter([
                 element: <ProjectsPanel/>
             },
             {
-                path: '/upcomingprojects',
-                element: <UpcomingProjectsTRY/>
-            },
-            {
                 path: '/ongoingProjects',
                 element: <OnGoingProjects/>
+            },
+            {
+                path: '/assetSection',
+                element: <AssetSection/>
+            },
+            {
+                path: '/upcomingprojects',
+                element: <UpcomingProjectsTRY/>
             },
             {
                 path: '/history',
