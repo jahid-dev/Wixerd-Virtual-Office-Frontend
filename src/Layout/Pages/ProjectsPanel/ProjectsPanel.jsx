@@ -51,9 +51,7 @@ const ProjectsPanel = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-1/4 pl-4">
-                <YourStatus />
-            </div>
+            
         </div>
     );
 };

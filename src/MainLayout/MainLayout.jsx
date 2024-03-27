@@ -6,14 +6,14 @@ import TopBanner from "../Layout/Navigation/TopBanner";
 const MainLayout = () => {
     return (
         <div>
-            <div>
+            <div className="">
                 <TopBanner></TopBanner>
             </div>
             <div className="flex  ">
                 <div className="fixed">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="px-20 ">
+                <div className="px-20 mt-32 flex-1 ">
                     <Outlet></Outlet>
                 </div>
             </div>

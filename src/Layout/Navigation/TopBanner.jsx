@@ -3,7 +3,7 @@ import NotificationPanel from '../NotificationPanel/NotificationPanel';
 
 const TopBanner = () => {
     return (
-        <div className='flex p-6 pb-14 border  border-red-500 justify-between items-center'>
+        <div className='flex p-6  pb-14 fixed w-full z-10 border h-[12vh]  top-0 bg-white border-red-500 justify-between items-center'>
             <div>
                 <img className='w-[12vw]' src={logo} alt="" />
             </div>

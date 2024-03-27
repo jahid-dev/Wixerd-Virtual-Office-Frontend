@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const CollapsibleCard = ({ title, children, isOpen, toggleCard }) => {
     return (
-        <div className={`relative mb-4 overflow-hidden transition-all ${isOpen ? 'w-full transition-all ease-out duration-500' : 'w-10 transition-all ease-in duration-500'}`}>
+        <div className={`relative mb-4 overflow-hidden transition-all ${isOpen ? 'w-full transition-all ease-out duration-500' : 'w-auto transition-all ease-in duration-500'}`}>
             <div className={`flex flex-col bg-blue-500 text-white rounded-md`}>
                 <div className="p-4 flex justify-between items-center cursor-pointer" onClick={toggleCard}>
                     <h3 className="text-xl font-bold">{title}</h3>
@@ -25,7 +25,7 @@ const YourStatus = () => {
     };
 
     return (
-        <div className="w-full relative">
+        <div className="w-full mt-20 ">
             <div className="flex items-center justify-between">
                 <h2 className="text-xl font-bold mb-4">Your Status</h2>
                 {isOpen ? (
@@ -35,7 +35,7 @@ const YourStatus = () => {
                 )}
 
                 <CollapsibleCard title="Your Status" isOpen={isOpen}>
-                    <p>Your status content goes here.</p>
+                    <p className=''>Your status content goes here.</p>
                 </CollapsibleCard>
             </div>
 
