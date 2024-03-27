@@ -4,6 +4,7 @@ import Dashboard from "../Layout/Dashboard/Dashboard";
 import UpcomingProjectsTRY from "../Layout/Pages/UpcomingProjectsTRY/UpcomingProjectsTRY";
 import ProjectsPanel from "../Layout/Pages/ProjectsPanel/ProjectsPanel";
 import OnGoingProjects from "../Layout/Pages/OnGoingProjects/OnGoingProjects";
+import History from "../Layout/Pages/History/History";
 
 
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: '/ongoingProjects',
                 element: <OnGoingProjects/>
+            },
+            {
+                path: '/history',
+                element: <History/>
             }
         ]
     }

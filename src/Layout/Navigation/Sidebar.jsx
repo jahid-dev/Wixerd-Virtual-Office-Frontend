@@ -29,7 +29,7 @@ const Sidebar = () => {
                     <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={Creative} alt="" /> Creative Brust</NavLink>
                     <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={Consultation} alt="" /> Consultation</NavLink>
                     <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={Collaboration} alt="" /> Collaboration</NavLink>
-                    <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={History} alt="" /> History</NavLink>
+                    <NavLink to='/history' className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={History} alt="" /> History</NavLink>
                     <NavLink to='/upcomingprojects' className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={Upcoming} alt="" /> Upcoming Projects</NavLink>
                     <NavLink className={"flex justify-center gap-x-2 items-center"}><img className="w-[2rem]" src={New} alt="" /> New Idea</NavLink>
 
