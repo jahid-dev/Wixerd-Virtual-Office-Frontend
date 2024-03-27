@@ -1,11 +1,12 @@
+
+
 import { useState } from 'react';
 
-// Shared CollapsibleCard component
-const CollapsibleCard = ({ title, children, isOpen }) => {
+const CollapsibleCard = ({ title, children, isOpen, toggleCard }) => {
     return (
-        <div className={`relative mb-4 overflow-hidden transition-all ${isOpen ? 'w-full' : 'w-10'} ease-in-out duration-500`}>
+        <div className={`relative mb-4 overflow-hidden transition-all ${isOpen ? 'w-full transition-all ease-out duration-500' : 'w-10 transition-all ease-in duration-500'}`}>
             <div className={`flex flex-col bg-blue-500 text-white rounded-md`}>
-                <div className="p-4 flex justify-between items-center cursor-pointer">
+                <div className="p-4 flex justify-between items-center cursor-pointer" onClick={toggleCard}>
                     <h3 className="text-xl font-bold">{title}</h3>
                 </div>
                 <div className={`p-4 ${isOpen ? 'opacity-100' : 'opacity-0'}`}>
@@ -25,19 +26,19 @@ const YourStatus = () => {
 
     return (
         <div className="w-full relative">
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                <h2 className="text-xl font-bold">Your Status</h2>
-                <span className="text-lg cursor-pointer" onClick={toggleCard}>
-                    {isOpen ? (
-                        <span>&#x25B6;</span>
-                    ) : (
-                        <span>&#x25C0;</span>
-                    )}
-                </span>
+            <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold mb-4">Your Status</h2>
+                {isOpen ? (
+                    <span className="text-lg cursor-pointer" onClick={toggleCard}>▶</span>
+                ) : (
+                    <span className="text-lg cursor-pointer" onClick={toggleCard}>◀</span>
+                )}
+
                 <CollapsibleCard title="Your Status" isOpen={isOpen}>
-                <p>Your status content goes here.</p>
-            </CollapsibleCard>
+                    <p>Your status content goes here.</p>
+                </CollapsibleCard>
             </div>
+
         </div>
     );
 };
