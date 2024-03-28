@@ -4,8 +4,8 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 const YourStatus = () => {
     const [open, setOpen] = useState(true)
     return (
-        <div className="mt-6 relative ">
-            <div className="flex mb-2 justify-between ">
+        <div className="mt-2 relative ">
+            <div className="flex mb-4 justify-between ">
                 <p></p>
                 <p onClick={() => setOpen(!open)} className="bg-red-400 mr-2 relative right-0 cursor-pointer inline-block p-3 rounded-full text-white text-2xl">
                     <IoMdArrowRoundForward></IoMdArrowRoundForward>

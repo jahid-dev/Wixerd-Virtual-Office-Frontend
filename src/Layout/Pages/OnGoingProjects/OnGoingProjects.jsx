@@ -7,7 +7,7 @@ const ProjectItem = ({ title, imageSrc }) => {
             <div className="flex flex-col">
                 <p>{title}</p>
             </div>
-            <div className="grid justify-center">
+            <div className="mx-auto">
                 <img className="w-72 h-44 rounded-md shadow-sm" src={imageSrc} alt="" />
             </div>
         </span>
