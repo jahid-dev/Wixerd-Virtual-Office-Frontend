@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCards from '../../Shared/ProjectCards/ProjectCards';
+import YourStatus from '../../Shared/YourStatus/YourStatus';
 
 
 const UpperTitle = ({ text }) => {
@@ -30,9 +31,9 @@ const ProjectsPanel = () => {
         { id: 8, name: 'Simulation Data', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
     ];
     return (
-        <div className='flex w-full'>
+        <div className='flex gap-x-5 justify-between w-full '>
             {/* concent div */}
-            <div>
+            <div className='w-3/4 '>
                 {/* overview updates part starts */}
                 <UpperTitle text={"Overview Updates"}></UpperTitle>
                 <div className='flex gap-x-10'>
@@ -71,8 +72,8 @@ const ProjectsPanel = () => {
             </div>
             {/* concent div ends*/}
             {/* your status div */}
-            <div>
-
+            <div className='w-1/4'>
+                <YourStatus></YourStatus>
             </div>
 
         </div>
