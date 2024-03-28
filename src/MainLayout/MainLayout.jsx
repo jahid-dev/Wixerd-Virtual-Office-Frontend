@@ -13,7 +13,7 @@ const MainLayout = () => {
                 <div className="fixed">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="px-20 mt-32 flex-1 ">
+                <div className="px-28 mt-32 flex-1 ">
                     <Outlet></Outlet>
                 </div>
             </div>

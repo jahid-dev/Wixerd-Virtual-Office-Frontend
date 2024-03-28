@@ -1,57 +1,80 @@
-import YourStatus from "../../Shared/YourStatus/YourStatus";
+import React from 'react';
+import ProjectCards from '../../Shared/ProjectCards/ProjectCards';
 
 
-const ProjectItem = ({ title, imageSrc }) => {
+const UpperTitle = ({ text }) => {
     return (
-        <span className="mb-3 mr-2"> 
-            <div className="flex flex-col">
-                <p>{title}</p>
-            </div>
-            <div className="grid justify-center">
-                <img className="w-72 h-44 rounded-md shadow-sm" src={imageSrc} alt="" />
-            </div>
-        </span>
+        <h2 className='text-2xl font-bold'>{text}</h2>
+    )
+}
+const AssetItem = ({ name, imageUrl }) => {
+    return (
+        <div className="flex flex-col items-center">
+            <img src={imageUrl} alt={name} className="w-20 h-28" />
+            <p className="mt-2 text-center">{name}</p>
+        </div>
     );
 };
 
+
 const ProjectsPanel = () => {
-    const defaultImageUrl = "https://i.ibb.co/23vqMnr/collage-customer-experience-concept-23-2149367132.jpg";
+    const img = "https://i.ibb.co/23vqMnr/collage-customer-experience-concept-23-2149367132.jpg"
+    const assets = [
+        { id: 1, name: 'Icons', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+        { id: 2, name: 'Images', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+        { id: 3, name: 'Sound Tracks', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+        { id: 4, name: 'Videos', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+        { id: 5, name: 'Illustrations', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+        { id: 6, name: 'Animations', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+        { id: 7, name: 'Scripts', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+        { id: 8, name: 'Simulation Data', imageUrl: 'https://i.ibb.co/9TknXYR/image.png' },
+    ];
     return (
-        <div className="flex">
-            <div className="flex-grow">
-                <h2 className="text-xl font-bold">Overview Updates</h2>
-                <div className="grid grid-cols-3 gap-2 py-3">
-                    <ProjectItem title="Update from management" imageSrc={defaultImageUrl} />
-                    <ProjectItem title="News & Events" imageSrc={defaultImageUrl} />
-                    <ProjectItem title="List Projects by you" imageSrc={defaultImageUrl} />
+        <div className='flex w-full'>
+            {/* concent div */}
+            <div>
+                {/* overview updates part starts */}
+                <UpperTitle text={"Overview Updates"}></UpperTitle>
+                <div className='flex gap-x-10'>
+                    <ProjectCards projectImg={img} projectTitle={"Update from management"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"News & Events"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"List Projects by you"}></ProjectCards>
                 </div>
-            <h2 className="text-xl font-bold">On-going Project overviews</h2>
-            <div className="grid grid-cols-3 gap-2 py-3">
-                <ProjectItem title="Clients comment" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Senior Comment" imageSrc={defaultImageUrl} />
-                <ProjectItem title="General rules for project creation" imageSrc={defaultImageUrl} />
+                {/* overview updates part ends */}
+
+                {/* Ongoin project overview updates */}
+                <UpperTitle text={"On-going project overview"}></UpperTitle>
+                <div className='flex gap-x-10'>
+                    <ProjectCards projectImg={img} projectTitle={"Clients Comments"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"Senior Comments"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"General Rules for project creation"}></ProjectCards>
+                </div>
+
+                {/* Assest and collaboration */}
+                <UpperTitle text={"Asset & Collaboration"}></UpperTitle>
+                <div className='flex gap-x-10'>
+                    <ProjectCards projectImg={img} projectTitle={"Graphic Assets"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"Documentation"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"Collaboration requests"}></ProjectCards>
+                </div>
+                <div className='flex gap-x-10'>
+                    <ProjectCards projectImg={img} projectTitle={"Coding assests"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"Tips"}></ProjectCards>
+                    <ProjectCards projectImg={img} projectTitle={"Collaboration with"}></ProjectCards>
+                </div>
+                <UpperTitle text={"Upcoming Projects"}></UpperTitle>
+                <div className='bg-slate-300 flex items-center  justify-around w-full my-3 rounded-xl h-48'>
+                    {assets.map(asset => (
+                        <AssetItem key={asset.id} name={asset.name} imageUrl={asset.imageUrl} />
+                    ))}
+                </div>
+            </div>
+            {/* concent div ends*/}
+            {/* your status div */}
+            <div>
+
             </div>
 
-            <h2 className="text-xl font-bold">Asset & Collaboration</h2>
-            <div className="grid grid-cols-3 gap-2 py-3">
-                <ProjectItem title="Graphic assets" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Documentation" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Collaboration requests" imageSrc={defaultImageUrl} />
-            </div>
-            <div className="grid grid-cols-3 gap-2 py-3">
-                <ProjectItem title="Coding assets" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Tips" imageSrc={defaultImageUrl} />
-                <ProjectItem title="Collaboration with" imageSrc={defaultImageUrl} />
-            </div>
-
-            <h2 className="text-xl font-bold">Upcoming Projects</h2>
-                <div className="grid grid-cols-3 py-3">
-                    <div className="col-span-3 bg-blue-500 flex justify-center items-center h-44 rounded-md">
-                        Upcoming Projects Box
-                    </div>
-                </div>
-            </div>
-            
         </div>
     );
 };

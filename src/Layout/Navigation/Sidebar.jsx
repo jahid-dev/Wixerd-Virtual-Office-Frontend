@@ -16,7 +16,7 @@ import { useState } from "react";
 const Sidebar = () => {
     const [open, setOpen] = useState(false)
     return (
-        <aside className='h-screen relative top-28  pl-3 bg-white border-r shadow-2xl '>
+        <aside className='h-screen relative top-24  pl-3 bg-white border-r shadow-2xl '>
             <nav className='h-full flex flex-col items-center  '>
                 <div onClick={() => setOpen(!open)} className="w-full cursor-pointer flex p-2 justify-end mt-2 mb-5">
                     <img className="w-[2.5vw]" src={w} alt="" />
