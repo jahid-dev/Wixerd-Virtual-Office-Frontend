@@ -11,7 +11,7 @@ const YourStatus = () => {
                     <IoMdArrowRoundForward></IoMdArrowRoundForward>
                 </p>
             </div>
-            <div className={`rounded-lg overh absolute right-0 transition-all duration-700  h-screen bg-gray-200 ${open ? "w-16" : "w-[27rem]"}`}>
+            <div className={`rounded-lg overflow-hidden absolute right-0 transition-all duration-700  h-screen bg-gray-200 ${open ? "w-16" : "w-[27rem]"}`}>
 
                 <p className="text-black  overflow-hidden text-xl text-center">Your Status Lies here</p>
             </div>

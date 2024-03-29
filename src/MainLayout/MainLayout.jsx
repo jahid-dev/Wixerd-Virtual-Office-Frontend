@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../Layout/Navigation/Sidebar";
 import TopBanner from "../Layout/Navigation/TopBanner";
+import ToTheTop from "../Layout/Shared/ToTheTop/ToTheTop";
 
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="relative">
             <div className="">
                 <TopBanner></TopBanner>
             </div>
@@ -17,7 +18,9 @@ const MainLayout = () => {
                     <Outlet></Outlet>
                 </div>
             </div>
-
+            <div className="">
+                <ToTheTop></ToTheTop>
+            </div>
         </div>
     );
 };
